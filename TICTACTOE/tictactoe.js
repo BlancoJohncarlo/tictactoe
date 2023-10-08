@@ -217,6 +217,26 @@ function findBestMove() {
 
     return bestMove.row === -1 ? null : bestMove;
 }
+function restartGame() {
+    board = [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', '']
+    ];
+    currentPlayer = 'X';
+    gameOver = false;
+
+    var cells = document.getElementsByClassName('cell');
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].innerText = '';
+    }
+
+    document.getElementById('result').innerText = '';
+
+    if (currentPlayer === 'O' && vsAI && !gameOver) {
+        setTimeout(makeAIMove, 500);
+    }
+}
 
 function backToMainScreen() {
     gameContainer.style.display = 'block';
