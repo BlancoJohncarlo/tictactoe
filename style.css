@@ -48,6 +48,7 @@ canvas {
 
 .cell {
     width: 100px;
+    margin-left: 20px;
     height: 100px;
     text-align: center;
     font-size: 24px;
