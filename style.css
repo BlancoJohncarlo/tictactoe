@@ -1,0 +1,106 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place the canvas behind other content */
+}
+
+.game-container {
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background color */
+    border: 5px solid #e74c3c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    max-width: 80%; /* Adjust the maximum width as needed */
+}
+
+/* Existing CSS for .board, .cell, .result, .options, and button (no changes) */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+    max-width: 300px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #eee;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+}
+.hidden {
+    display: none;
+}
+
+/* Add this CSS to style the option buttons */
+.option-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px; /* Add margin to separate the buttons */
+}
+
+
+.options button.clicked {
+    background-color: #fefefe;
+    color: #c0392b;
+}
+.start-button:hover{
+    transition: .5s;
+    background-color: #fefefe;
+    color: #c0392b;
+    
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
